@@ -25,16 +25,9 @@ addList.addEventListener("click",() =>{
     const removeTask= document.createElement("button")
     removeTask.classList.add("remove")
     removeTask.textContent="X"
-    
-    list.append(taskStatus, taskName, removeTask)
-    addTasks.appendChild(list)
 
     taskStatus.addEventListener("change", () =>{
-    taskStatus.classList.toggle("check")
-    });
-
-    removeTask.addEventListener("click", () =>{
-    addTasks.removeChild(list)
+    taskName.classList.toggle("check")
     });
 
     taskName.addEventListener("keydown", (e) => {
@@ -43,6 +36,13 @@ addList.addEventListener("click",() =>{
             taskName.blur();
         }
     });
+
+    removeTask.addEventListener("click", () =>{
+    addTasks.removeChild(list)
+    });
+
+    list.append(taskStatus, taskName, removeTask)
+    addTasks.appendChild(list)
 });
 
 clearAll.addEventListener("click", ()=>{

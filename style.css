@@ -38,6 +38,9 @@ li input[type="checkbox"] {
     font-size: larger;
     z-index: 999;
 }
+.check{
+    text-decoration: line-through;
+}
 @media (max-width: 650px) {
 .main{
     position: absolute;
